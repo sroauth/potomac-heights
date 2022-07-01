@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Procedures for Purchasing | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <link rel="stylesheet" href="/static/css/test.css" />
+
+    <script src="/static/js/htmx.min.js"></script>
+    <script src="/static/js/rundown.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main
+        class="container mx-auto flex justify-between gap-24 px-5 py-10 text-lg"
+      >
+        <div class="document">
+          <h1>Procedures for Purchasing a Membership in Potomac Heights</h1>
+
+          <blockquote>
+            <p>
+              PHCH strongly recommends that BEFORE you apply for membership you
+              obtain your free annual copy of your credit report from
+              www.annualcreditreport.com, the website established by the three
+              major Credit Reporting Agencies in compliance with the Fair Credit
+              Reporting Act. Please review your credit report and correct any
+              errors PRIOR to applying for membership.
+            </p>
+
+            <p>
+              PHCH has an established policy on approving appliances for
+              membership. Please review the policy so that you are aware of the
+              criterion we consider when reviewing an application.
+            </p>
+          </blockquote>
+
+          <h2>Membership Approval Policy</h2>
+
+          <section>
+            <h3>General Policy Statement</h3>
+
+            <p>
+              Potomac Heights Cooperative Housing (PHCH) establishes the
+              following policy to define the qualifications to become a member
+              of the cooperative, handling of confidential applicant
+              information, and our non-discrimination practices.
+            </p>
+          </section>
+
+          <section>
+            <h3>Confidential Information</h3>
+
+            <p>
+              All information provided to PHCH in the process of applying for
+              membership in the cooperative is confidential. The applicant's
+              information is accessible to the administrative staff and the Vice
+              President of the Board of Directors who serve as our membership
+              officer. An overview of an applicant's information is discussed
+              when an application is presented for approval by the Board if
+              Directors.
+            </p>
+
+            <p>
+              Upon approval for membership an applicant's information becomes
+              part of their confidential membership record.
+            </p>
+
+            <p>
+              If an applicant is turned down for membership their application is
+              retained for a period of 12 months, remains confidential and then
+              ultimately destroyed.
+            </p>
+          </section>
+
+          <section>
+            <h3>PHCH Does Not Discriminate</h3>
+
+            <p>
+              PHCH does not discriminate based upon race, color, sex, national
+              origin, religion, family status, physical disabilities/handicap,
+              martial status, age or lawful source of income.
+            </p>
+          </section>
+
+          <section>
+            <h3>Membership Approval Process</h3>
+
+            <ol>
+              <li>
+                New Membership - Individual
+                <p>
+                  Complete and sign the application, provide proof of income,
+                  attend the membership orientation in-person
+                </p>
+              </li>
+
+              <li>
+                New Membership - Joint
+                <p>
+                  Complete and sign one joint application, provide proof of
+                  income for both parties, attend the membership orientation
+                  in-person
+                </p>
+              </li>
+
+              <li>
+                Add-On Membership
+                <p>
+                  Complete and sign the add-on membership application. Both the
+                  existing member and the applicant to be added must attend the
+                  membership orientation in-person
+                </p>
+              </li>
+
+              <li>
+                Inherited Membership
+                <p>
+                  Complete and sign a membership application, provide proof of
+                  income, attend the membership orientation in-person
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Approval Criterions</h3>
+
+            <p class="text-green-700">
+              PHCH considers a number of different criterions in deciding
+              whether to approve membership or not. Those criterions are:
+            </p>
+
+            <ul>
+              <li>Income</li>
+              <li>
+                Prior housing information (rental history, mortgage history,
+                history of HOA dues, etc.)
+              </li>
+              <li>Credit history</li>
+              <li>Financial obligations</li>
+              <li>Your Public Record(s)</li>
+              <li>
+                The validity of the information you provide on your application
+              </li>
+              <li>The number of people intending to occupy the dwelling</li>
+              <li>
+                Verification of your identity with a valid non-expired US
+                Government issued ID
+              </li>
+            </ul>
+
+            <p class="text-red-600">
+              Reasons to deny an application for membership:
+            </p>
+
+            <ul>
+              <li>Pets (number or unacceptable breeds)</li>
+              <li>Prior evictions, foreclosures, debts to other communities</li>
+              <li>Information contained in your public record(s)</li>
+              <li>Poor credit history</li>
+              <li>Excessive financial obligations</li>
+              <li>Not sufficient income or non-verifiable source of income</li>
+              <li>False or missing information on the application</li>
+              <li>Does not complete the entire membership process</li>
+              <li>Number of occupants exceeds “reasonable” occupancy limits</li>
+              <li>
+                Poor reference from a past landlord (unpaid rent, damages, etc.)
+              </li>
+              <li>Unable to provide positive identification</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Financial Qualifications</h3>
+
+            <p>
+              To ensure that applicants becoming members will have the ability
+              to pay the monthly obligations to PHCH as well as reasonable
+              living expenses for a PHCH dwelling we have established a maximum
+              debt-to-income ratio and a minimum disposable income threshold.
+            </p>
+
+            <ol>
+              <li>
+                The maximum Debt-to-income Ratio for an individual applicant or
+                joint applicant is 55%.
+              </li>
+              <li>
+                The minimum calculated Disposable Income for any applicant(s)
+                must be at least $1,000 per month.
+              </li>
+            </ol>
+
+            <p>Applicants are required to provide proof of income</p>
+
+            <ol>
+              <li>
+                Only lawful, verifiable income is acceptable.
+                <ol>
+                  <li>
+                    This includes verifiable government subsidized forms of
+                    income. Examples of such income are social security, court
+                    ordered child support, court ordered spousal support. or
+                    food and healthcare vouchers.
+                  </li>
+                  <li>
+                    Those who receive pay from an employer please provide copies
+                    of your two most recent paystubs.
+                  </li>
+                  <li>
+                    We require those applicants who receive income from
+                    self-employment, your family's business, rental income; or
+                    any other income that is not received in the form of a
+                    regular paycheck to complete an IRS Request for Transcript
+                    of Tax Return, form 4506-T. Your tax transcripts will be
+                    mailed directly to PHCH.
+                  </li>
+                  <li>
+                    The debt-to-income calculations for individuals receiving
+                    income from sources other than a regular payroll check will
+                    be considered the average of the income reported to the IRS
+                    in the most recent tax years.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                If you are self-employed we may require additional information
+                such as business license and Tax ID Number.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>PHCH Reviews Your Credit Report</h3>
+
+            <p>PHCH obtains and reviews the credit report of all applicants.</p>
+
+            <ol>
+              <li>
+                Any debt with an outstanding balance listed on your credit
+                report is included in your debt-to-income calculation
+                <ol>
+                  <li>
+                    PHCH calculates an estimated minimum payment for debts with
+                    no listed minimum payment, such as student loans or
+                    collection items. Minimum payment is calculated as 2% of the
+                    balance owed.
+                  </li>
+                  <li>
+                    Student loans in deferral at the time of application are
+                    included in your debt-to-income calculation because they
+                    will one day affect your ability to pay your obligations to
+                    PHCH.
+                  </li>
+                  <li>
+                    The full payment amount of any joint debt is included in the
+                    debt-to-income calculation.
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>PHCH Reviews Your Public Records</h3>
+
+            <p>
+              PHCH reviews your public records as well as the public records of
+              anyone age 18 and over who will reside in your home.
+            </p>
+
+            <p>
+              We will not approve membership when the applicant or any family
+              member age 18 and over had a public record of criminal behavior
+              involving charges or convictions for crimes involving:
+            </p>
+
+            <ul>
+              <li>violence against people or property,</li>
+              <li>illegal possession of weapons,</li>
+              <li>illegal substance use or sale,</li>
+              <li>sexual offenses,</li>
+              <li>theft,</li>
+              <li>or fraud.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Membership Orientation</h3>
+
+            <p>
+              All parties who will be listed on the membership certificate are
+              required to attend a membership orientation. Orientation for
+              prospective members is offered once or twice each month based upon
+              the number of pending applications. Orientation usually lasts
+              about 60 minutes.
+            </p>
+          </section>
+
+          <section>
+            <h3>Transfer of Membership</h3>
+
+            <p>
+              From time-to-time an existing member may wish to transfer their
+              membership to a different address upon the sale of their current
+              membership. This is permitted when the following conditions are
+              met:
+            </p>
+
+            <ol>
+              <li>
+                Owning more than one share is not permitted. The existing shares
+                must be sold and the buyer (new member) must have gone to
+                settlement.
+              </li>
+              <li>
+                Only members who have been in-good-standing for the previous
+                twelve (12) months will be permitted to transfer their
+                membership.
+                <p>
+                  <span class="font-medium">Note:</span> In-good-standing is
+                  defined as paying the monthly operating payment by the first
+                  calendar day of each month, not violating any by-laws, not
+                  violating any rules or regulations.
+                </p>
+              </li>
+              <li>
+                The member has 120 days from the sale of their current
+                membership to go to settlement on a new address. PHCH will waive
+                the membership fee when transferring a membership from one
+                address to another. The settlement fee and real estate property
+                tax on the new address remain due at the time of settlement on
+                the new address.
+              </li>
+            </ol>
+          </section>
+        </div>
+
+        <aside class="sticky top-10 items-start self-start">
+          <h2 class="font-serif text-4xl font-bold">
+            How do I purchase a membership?
+          </h2>
+
+          <p class="mb-3">
+            Want to learn about the purchasing procedures for a membership in
+            Potomac Heights?
+          </p>
+
+          <a
+            href="https://ipfs.io/ipfs/bafkreidrzdt5vsp7eodgj52tokxsuloi5nc7ya7oflcpxfbfy7a64s7tvy"
+            target="_blank"
+            class="border-2 border-indigo-800 py-1 px-2 font-medium text-indigo-800"
+          >
+            View Procedures for Purchasing
+          </a>
+
+          <div id="toc" class="mt-5"></div>
+        </aside>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+
+    <script>
+      new Rundown("#toc", "section");
+    </script>
+  </body>
+</html>

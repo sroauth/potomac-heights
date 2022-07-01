@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Photos | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/news.js"></script>
+  </head>
+
+  <body x-data="app">
+    <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+    <main class="container mx-auto px-5">
+      <div class="flex justify-evenly py-24">
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src="/static/img/fun/img_4017-150x150.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span>Fun Around the Community!</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src="/static/img/mystery/murder-mystery-1-web-150x150.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span>Murder Mystery Night</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src="/static/img/mural/img_1521-150x150.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span>Mural Painting</span>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src="/static/img/ribbons/img_4057-150x150.jpg"
+            alt=""
+            loading="lazy"
+          />
+          <span>Memory Ribbons</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-5">
+        <img src="/static/img/fun/img_4017-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4018-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4019-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4025-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4026-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4027-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4028-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4029-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4030-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4031-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4032-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4033-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4034-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4035-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4036-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4038-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4039-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4040-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4041-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4042-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4043-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4044-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4045-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4046-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4047-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4048-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4049-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4050-150x150.jpg" alt="" loading="lazy" />
+        <img
+          src="/static/img/fun/img_4050-2-150x150.jpg"
+          alt=""
+          loading="lazy"
+        />
+        <img src="/static/img/fun/img_4051-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4052-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4053-150x150.jpg" alt="" loading="lazy" />
+        <img src="/static/img/fun/img_4054-150x150.jpg" alt="" loading="lazy" />
+      </div>
+      <!-- <section
+          class="mx-auto flex w-full max-w-[35em] flex-col gap-5 text-lg"
+        >
+          
+
+          <h2 class="font-serif text-4xl font-bold leading-tight text-gray-500">
+            Murder Mystery Night
+          </h2>
+
+          <div class="flex snap-x snap-mandatory gap-5 overflow-x-scroll pb-5">
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mystery/murder-mystery-1-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mystery/murder-mystery-2-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mystery/murder-mystery-3-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mystery/murder-mystery-4-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mystery/murder-mystery-5-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+
+          <h2 class="font-serif text-4xl font-bold leading-tight text-gray-500">
+            Mural Painting
+          </h2>
+
+          <div class="flex snap-x snap-mandatory gap-5 overflow-x-scroll pb-5">
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/img_1521-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-1-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-2-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-3-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-4-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-5-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-6-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-7-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-8-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-9-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/mural/painting-the-mural-10-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+
+          <h2 class="font-serif text-4xl font-bold leading-tight text-gray-500">
+            Memory Ribbons
+          </h2>
+
+          <div class="flex snap-x snap-mandatory gap-5 overflow-x-scroll pb-5">
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4057-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4058-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4064-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4065-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4066-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4067-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4068-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/img_4069-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/memory-ribbons-1-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="h-64 w-64 snap-center snap-always rounded"
+              src="/static/img/ribbons/memory-ribbons-2-web-150x150.jpg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+        </section> -->
+    </main>
+
+    <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>What is a cooperative? | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/about.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="container mx-auto flex justify-between px-5">
+        <section class="mx-auto flex w-[35em] flex-col gap-5 py-24 text-lg">
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            What is a cooperative?
+          </h1>
+
+          <p>
+            A cooperative is a multi-dwelling community where each member has a
+            part ownership of the community, and a lease (or contract or share
+            of stock) enabling the owner to occupy a particular dwelling.
+          </p>
+
+          <p>
+            The cooperative association, consisting of all member shareholders,
+            owns the entire community, including all of the individual
+            dwellings. Each cooperative owner holds shares in the association -
+            just like owning shares in any other corporation.
+          </p>
+
+          <p>
+            Management and financial decisions are made by the cooperative
+            members through voting at regularly scheduled meetings and by an
+            elected board of directors that oversees day-to-day operations.
+          </p>
+
+          <p>
+            All of this might sound complex but cooperative living has many
+            advantages. cooperative residents generally get the same tax
+            treatment as other homeowners. If they have a share loan that is
+            secured by their membership certificate the annual interest paid on
+            that loan is deductible.
+          </p>
+
+          <p>
+            Additionally, if the cooperative association has a mortgage, members
+            can also deduct their proportionate share of the real estate taxes
+            the cooperative pays.
+          </p>
+
+          <h2 class="mt-5 font-serif text-4xl font-bold leading-tight">
+            Is a cooperative different than a condominium?
+          </h2>
+
+          <p>
+            If you own a condominium, your apartment and a percentage of the
+            common areas belong to you. A cooperative owner does not own their
+            dwelling. In fact, you could call that person a tenant.
+          </p>
+
+          <p class="border-b border-stone-300 pb-10">
+            Perhaps the most important distinction between a condominium and a
+            cooperative is that most cooperative associations require that a
+            prospective purchaser be approved by a membership committee composed
+            of current cooperative owners.
+          </p>
+
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight text-indigo-900"
+          >
+            An application for membership may be rejected for several reasons.
+          </h2>
+
+          <ol class="flex list-inside list-decimal flex-col gap-5">
+            <li>
+              If an applicant does not meet any of the guidelines for membership
+              approval we will not approve membership. Our Membership Approval
+              Guidelines are outlined on this website under Procedures for
+              Purchasing.
+            </li>
+            <li>
+              If your income is not from a lawful verifiable source or we are
+              unable to verify your income we will not approve membership.
+            </li>
+            <li>
+              If the Board of Directors believes that a potential purchaser is
+              unwilling to comply with the By-Laws or Rules or Regulations, it
+              may reject the application.
+            </li>
+          </ol>
+
+          <p>
+            Under no circumstances can someone be turned down because of age,
+            sex, race, sexual orientation or religion.
+          </p>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

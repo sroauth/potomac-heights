@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Memberships | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/about.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="container mx-auto flex justify-between px-5">
+        <section class="mx-auto flex w-[35em] flex-col gap-5 py-24 text-lg">
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            What does a membership entail?
+          </h1>
+
+          <p>
+            Potomac Heights Cooperative Housing is an incorporated, non-profit
+            cooperative, consisting of an association of members who
+            individually enjoy membership in the cooperative and the perpetual
+            use rights to one of the 484 dwellings that are exclusively owned by
+            the corporation. All members are the joint owners of the
+            corporation, each having an equal share in its ownership, a voice in
+            the election of the corporation's Board of Directors, and the right
+            to participate in the decisions on how the community is operated. In
+            addition, the Cooperative members are responsible for payment of the
+            corporation's expenses and assessments.
+          </p>
+
+          <p>
+            Membership in the Cooperative is evidenced by a Membership
+            Certificate. The occupancy of a dwelling takes place under the terms
+            and conditions of a Member's Mutual Residency Contract. The members
+            of the Cooperative insist on the strict enforcement of the contract
+            provisions and other Rules and Regulations, which they have
+            established to ensure that they will continue to live peaceably in a
+            good community that will improve and perpetuate itself.
+          </p>
+
+          <p class="border-b border-stone-300 pb-10">
+            In addition to the dwellings, the mutual ownership interests of the
+            members include an equal share of the corporation's 140 acres of
+            land, utilities, such as deep wells, Cooperative Office, Maintenance
+            Shop areas and common-use facilities, such as the Community Building
+            and Swimming Pool.
+          </p>
+
+          <h2 class="mt-5 font-serif text-4xl font-bold leading-tight">
+            Organization
+          </h2>
+
+          <p>
+            The members of the cooperative are a formally organized Cooperative.
+          </p>
+
+          <p>
+            The members of the Cooperative meet annually to elect a Board of
+            Directors whose duties are to manage the corporation. From its eight
+            members, the Board elects the corporate officers; i.e., President,
+            Vice President, Secretary, Treasurer, and the committee chairpersons
+            who have functional management responsibilities in the areas of
+            Public Relations/Recreation, Special Projects/Long Term Planning,
+            Water & Sewer, and Buildings & Grounds. The daily operations of the
+            corporation are handled by a hired Manager who supervises the
+            Cooperative Office staff, the Maintenance Department personnel, and
+            the Water and Sewer Department personnel and operations.
+          </p>
+
+          <p class="border-b border-stone-300 pb-10">
+            To assure effective financial management and controls, a certified
+            public accounting firm annually audits and certifies the books and
+            financial records.
+          </p>
+
+          <h2 class="mt-5 font-serif text-4xl font-bold leading-tight">
+            Membership
+          </h2>
+
+          <p class="border-b border-stone-300 pb-10">
+            Membership in the cooperative is recorded on a Membership
+            Certificate that is given to each new member. The Membership
+            Certificate represents one share and ownership interest in the
+            corporation, as well as membership in the Cooperative. It gives each
+            member a voice in the election of officers and in determining how
+            the community will be operated. Membership rights are fully set
+            forth in the Cooperative's By-Laws.
+          </p>
+
+          <h2 class="mt-5 font-serif text-4xl font-bold leading-tight">
+            Mutual Residency Contract
+          </h2>
+
+          <p>
+            As a member of the cooperative, each member's relationship to the
+            corporation will be contractual. Members will receive the Perpetual
+            Use Rights to a dwelling and be assured of peaceable occupancy in
+            exchange for their agreement to undertake certain responsibilities
+            as a member and comply with the Cooperative's Rules and Regulations.
+            The contract is known as the Mutual Residency Contract and
+            applicants should read it carefully before becoming a member.
+          </p>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

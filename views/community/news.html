@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>What is a cooperative? | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/news.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="container mx-auto flex justify-between px-5 py-24 text-lg">
+        <section class="mx-auto flex w-[35em] flex-col gap-5 text-lg">
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            The Promoter
+          </h1>
+
+          <p>
+            LINK COMING SOON
+          </p>
+
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight"
+          >
+            Soliciting
+          </h2>
+
+          <p>
+            We have had issues with solicitors within the Community, these
+            companies have been notified that there is no soliciting within
+            Potomac Heights. If you continue to have unwanted solicitors at your
+            door, please ask them to leave and call the Charles County Sheriff's
+            office at 301-932-2222 to report them.
+          </p>
+
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight"
+          >
+            Schedule B Work
+          </h2>
+
+          <p>
+            We are taking Schedule B work orders. The cost is $25 per man hour
+            plus materials. Please contact the office for your estimate.
+          </p>
+
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight"
+          >
+            Spring Inspections - 2022
+          </h2>
+
+          <p>
+            Spring inspections will begin May 2, 2022. Once all inspections are
+            completed, the forms will be mailed.
+          </p>
+
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight"
+          >
+            Trash Services
+          </h2>
+
+          <p>
+            Evergreen Disposal Services (240) 468-6677.
+            Bulk items must be scheduled with the 
+            trash company for pickup. A bulk pick up charge
+            will be the responsiblity of the member and may
+            be due before pick up. Please contact the trash 
+            provider for that information.
+            Trash pick up is on Tuesday and Friday. 
+            Recycling is every other Wednesday. Please go to 
+            the Charles County Recycling webiste for the scheudled
+            pick up days.
+            Please place your recycling bin curside 
+            before 7am that morning to ensure pick up. 
+            Please return the recycling bin back to 
+            your dwelling after pick up.
+            
+            Cut down on trash collected by utilizing your
+            Recycling Service as much as possible.
+            Charles County Recycling is still operating.
+            <a
+              class="font-medium text-indigo-800 underline decoration-2"
+              href="https://www.charlescountymd.gov/services/environmental-resources/curbside-recycling"
+              >https://www.charlescountymd.gov/services/environmental-resources/curbside-recycling</a
+            >. 
+          </p>
+        </section>
+
+        <section
+          class="sticky top-10 flex w-[35em] flex-col items-start gap-5 self-start"
+        >
+          <h2 class="font-serif text-4xl font-bold leading-tight">
+            Office Hours and Closings
+          </h2>
+
+          <p>
+            The Potomac Heights Housing Office is open Monday - Friday 8:00am -
+            4:00pm. The Housing Office and Maintenance Shop will be closed in
+            observance of the following holidays:
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th
+                  class="border border-gray-200 bg-gray-100 px-2 text-left font-medium text-gray-700"
+                >
+                  Date
+                </th>
+                <th
+                  class="border border-gray-200 bg-gray-100 px-2 text-left font-medium text-gray-700"
+                >
+                  Time
+                </th>
+                <th
+                  class="border border-gray-200 bg-gray-100 px-2 text-left font-medium text-gray-700"
+                >
+                  Holiday
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <template x-for="item in calendar">
+                <tr>
+                  <td
+                    class="border border-gray-200 px-2"
+                    x-text="item.date"
+                  ></td>
+                  <td
+                    class="border border-gray-200 px-2"
+                    x-text="item.time"
+                  ></td>
+                  <td
+                    class="border border-gray-200 px-2"
+                    x-text="item.holiday"
+                  ></td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

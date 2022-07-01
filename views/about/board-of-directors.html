@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/gun.min.js"></script>
+    <script src="/static/js/sea.min.js"></script>
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/about.js"></script>
+  </head>
+
+  <body>
+    <div x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="pb-24 text-lg">
+        <section
+          class="container mx-auto flex flex-col items-center gap-5 py-24 px-5"
+        >
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            How do I meet with the Board of Directors?
+          </h1>
+
+          <p class="max-w-[35em]">
+            The Board of Directors meet on the 1st and 3rd Thursday of each
+            month. If you would like to meet with the Board of Directors, please
+            contact the Housing Office at (301) 743-3031 or
+            info@potomacheights.org to schedule an appointment.
+          </p>
+        </section>
+
+        <div
+          class="container mx-auto flex flex-wrap justify-center px-5 xl:px-0"
+        >
+          <section
+            class="flex max-w-[35em] flex-col gap-5 border-r xl:border-stone-300 xl:pr-12"
+          >
+            <h1 class="font-serif text-4xl font-bold leading-tight">
+              Staff Members
+            </h1>
+
+            <p>
+              Potomac Heights has a staff of nine full-time employees who handle
+              the day-to-day operations of the Cooperation. The staff report to
+              the Property Manager, who keeps the Board and membership informed.
+            </p>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <template x-for="member in staff">
+                <div>
+                  <h2 x-text="member.person"></h2>
+                  <p
+                    class="text-base text-stone-500"
+                    x-text="member.position"
+                  ></p>
+                </div>
+              </template>
+            </div>
+          </section>
+
+          <section
+            class="mt-24 flex max-w-[35em] flex-col gap-5 xl:mt-0 xl:pl-12"
+          >
+            <h1 class="font-serif text-4xl font-bold leading-tight">
+              Board of Directors
+            </h1>
+
+            <p>
+              The members of Potomac Heights Cooperative Housing elect a Board
+              of Director's consisting of eight members who make decisions for
+              the membership, to include directing the Property Manager.
+            </p>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <template x-for="director in directors">
+                <div>
+                  <h2 x-text="director.person"></h2>
+                  <p
+                    class="text-base text-stone-500"
+                    x-text="director.position"
+                  ></p>
+                </div>
+              </template>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

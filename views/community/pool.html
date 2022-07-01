@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>What is a cooperative? | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/news.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="container mx-auto flex justify-between px-5 py-24 text-lg">
+        <section class="mx-auto flex w-[35em] flex-col gap-5 text-lg">
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            Swimming Pool Rules and Regulations
+          </h1>
+
+          <img
+            class="rounded"
+            src="/static/img/Community-Pool-Banner.jpg"
+            alt=""
+          />
+
+          <p class="border border-gray-200 bg-gray-100 p-5">
+            The following rules and regulations are for the protection and
+            benefit of all to assure safe and sanitary operation of the pool
+            facilities. Your cooperation in abiding by these conditions will
+            afford a pleasant relaxation and recreation for all concerned.
+            Members and their families are requested to caution their children
+            to observe all rules and regulations and obey instructions of the
+            pool management.
+          </p>
+
+          <p>
+            Like all other Cooperative facilities, use of the swimming pool is
+            strictly limited to members who are listed on a membership of the
+            Cooperative who are in good standing, and the following special
+            categories of other authorized users:
+          </p>
+
+          <ol class="flex list-inside list-decimal flex-col gap-5">
+            <li>
+              Resident dependent members of the immediate family of Cooperative
+              members under the age of 22. All children of members, 22 years of
+              age and older, will purchase a daily ticket or they may accompany
+              the member and utilize the provided guest pass. Handicapped
+              children are exempt from this requirement.
+            </li>
+            <li>
+              All grandchildren of Cooperative members 18 years and under may be
+              allowed to enter the pool. Names of all grandchildren must be
+              listed on the pool application prior to the pool season.
+            </li>
+            <li>
+              Daily passes are $5 each. Daily passes may be purchased in the
+              Housing Office during business hours or at the pool gate on
+              weekends.
+            </li>
+            <li>
+              Non-swimming guests and children under the age of 5 years will
+              enter swimming pool free of charge.
+            </li>
+          </ol>
+
+          <p class="font-medium uppercase">
+            Note: Daily passes must be purchased with a member's check. If
+            payment is made by someone other than a member, that person and all
+            involved members/visitors will be banned from future use.
+          </p>
+
+          <p>
+            All persons using the pool or pool area do so at their own risk and
+            sole responsibility. The management does not assume responsibility
+            for any accident or injury in connection with such use. Persons
+            using the pool agrees with the owner and management for and in
+            consideration of the use of the pool as an added facility to make no
+            claim against the owner or management for any loss of life or
+            personal injury or damage to or loss of personal property, except
+            where such loss, injury or damage can be clearly proved to have
+            resulted from and been proximately caused by the direct negligence
+            of the owner, their agents, or employees, in the operation, care or
+            maintenance of the facility upon, the property whatsoever nature by
+            any guests growing out of the use of the swimming pool or pool area,
+            except where such loss, injury or damage can be clearly proved to
+            have resulted from and been proximately caused by the direct
+            negligence of the owner, his agents or employees, in the operation,
+            care or maintenance of the facility.
+          </p>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

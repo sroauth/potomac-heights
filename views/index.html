@@ -1,0 +1,124 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <main>
+        <section
+          class="h-screen bg-[url('/static/img/PHCH2.jpg')] bg-cover bg-center"
+        >
+          <div
+            class="flex h-full flex-col justify-between bg-gradient-to-t from-[#edeae9] to-[#edeae9]/80 backdrop-grayscale"
+          >
+            <header
+              hx-get="/static/html/header.html"
+              hx-trigger="load"
+            ></header>
+
+            <div class="container mx-auto flex flex-col items-center px-5">
+              <h1 class="font-serif text-3xl font-bold md:text-4xl">
+                Potomac Heights Cooperative Housing
+              </h1>
+
+              <div class="mt-5 max-w-[35em]">
+                <p>
+                  Potomac Heights Cooperative Housing is a cooperative community
+                  established in 1949 located about 20 miles south of
+                  Washington, D.C. in Indian Head, MD. Our community is situated
+                  on a bluff overlooking the Potomac River a convenient drive to
+                  the Indian Head Naval Support Facility, Waldorf, La Plata, and
+                  Washington, DC.
+                </p>
+
+                <div class="mt-10 flex justify-evenly">
+                  <a href="/about/memberships" class="rounded bg-yellow-500 py-2 px-4">
+                    Apply for membership
+                  </a>
+                  <a href="/community/news" class="rounded bg-indigo-900 py-2 px-4 text-white">
+                    View community news
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container mx-auto flex justify-evenly px-5 pb-10">
+              <div class="flex flex-col items-center gap-2">
+                <img src="/static/img/swimming-pool.png" alt="" class="h-16" />
+                <span>Community Pool</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2">
+                <img src="/static/img/school.png" alt="" class="h-16" />
+                <span>Community Building</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2">
+                <img src="/static/img/slider.png" alt="" class="h-16" />
+                <span>Playgrounds</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2">
+                <img src="/static/img/football.png" alt="" class="h-16" />
+                <span>Sports Ground</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="border-y bg-[#e9e6e1]">
+          <div class="container mx-auto py-10">
+            <h2 class="px-5 font-serif text-4xl font-bold">
+              Community Updates
+            </h2>
+
+            <div class="mt-5 flex flex-wrap">
+              <div class="w-full p-5 lg:w-1/2">
+                <h3 class="text-2xl font-medium">
+                  Housing Office Operating Status
+                </h3>
+                <p class="mt-2">
+                  For weather emergency operating status, the Housing Office
+                  follows the same schedule as Charles County Government.
+                </p>
+              </div>
+
+              <div class="w-full p-5 lg:w-1/2">
+                <h3 class="text-2xl font-medium">Charles County Recycling</h3>
+
+                <p class="mt-2">
+                  As you know, Charles County takes care of our recycling in
+                  Potomac Heights. Please keep in mind that all recycling carts
+                  must be taken to the street to be picked up. The recycling
+                  folks will not pick up the cart from your yard; they are not
+                  the same company that we pay to do our trash pick up.
+                </p>
+
+                <p class="mt-2">
+                  In order to continue receiving recycling service, all carts
+                  must be taken to the street for pick up. Carts that are not
+                  taken to the street will not be emptied.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

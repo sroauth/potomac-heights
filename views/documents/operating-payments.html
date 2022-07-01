@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Operating Payments | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="container mx-auto flex justify-between px-5 py-24 text-lg">
+        <section class="flex w-[35em] flex-col gap-5">
+          <h1 class="mt-5 font-serif text-4xl font-bold leading-tight">
+            Operating Payments
+          </h1>
+
+          <p>
+            Payments are accepted at the Housing Office in the form of check,
+            money order or credit card. Cash is not accepted under any
+            circumstances. Credit card payments may be made in person or over
+            the phone. A 3% fee will be charged for all payments made by credit
+            or debit card. If your credit union or bank offers a bill payer
+            service we encourage you to set-up a reoccurring scheduled payment
+            to the PHMHOA.
+          </p>
+
+          <p>
+            For your convenience there is a payment drop slot located next to
+            the rear door of the Housing Office. A payment deposited after
+            business hours on the 15th of the month will not be processed until
+            the following business day and will incur a late fee.
+          </p>
+        </section>
+
+        <section
+          class="sticky top-0 flex w-[35em] flex-col items-start gap-5 self-start"
+        >
+          <h2
+            class="mt-5 font-serif text-4xl font-bold leading-tight"
+          >
+            When is my payment due?
+          </h2>
+
+          <p>
+            Your monthly operating payment is due on the first day of each
+            month. A late fee is assessed if your payment is received after
+            close of business on the 15th day of the month. Your monthly
+            operating payment for includes:
+          </p>
+
+          <ul class="flex list-inside list-disc flex-col gap-5">
+            <li>Operating Assessment</li>
+            <li>Bay Restoration Fee</li>
+            <li>Property Taxes</li>
+            <li>Trash Service</li>
+            <li>Water and Sewer Service</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

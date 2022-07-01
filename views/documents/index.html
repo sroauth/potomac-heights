@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Documents | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/gun.min.js"></script>
+    <script src="/static/js/sea.min.js"></script>
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/documents.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main class="text-lg">
+        <section
+          class="container mx-auto flex flex-col items-center gap-5 py-24 px-5"
+        >
+          <h1 class="font-serif text-4xl font-bold leading-tight">
+            Complete Buyer's Package
+          </h1>
+          <p class="w-[35em]">
+            When downloading a Buyer's Package, please remember to read the
+            By-laws and Rules & Regulations
+            <strong>before</strong>
+            signing your Membership Application.
+          </p>
+          <div class="flex gap-5">
+            <a
+              href="/download"
+              target="_blank"
+              class="rounded border-2 border-indigo-800 py-1 px-2 font-medium text-indigo-800"
+            >
+              Download Buyer's Package
+            </a>
+          </div>
+        </section>
+
+        <div class="container mx-auto flex justify-center gap-10 px-5">
+          <section class="flex w-[35em] flex-col gap-5">
+            <h1 class="font-serif text-4xl font-bold leading-tight">
+              Buyer's Package
+            </h1>
+
+            <div class="mt-5 grid grid-cols-2 gap-5">
+              <template x-for="document in package">
+                <div>
+                  <a
+                    target="_blank"
+                    class="underline"
+                    x-bind:href="`https://ipfs.io/ipfs/${document.file}`"
+                    x-text="document.name"
+                  ></a>
+                </div>
+              </template>
+            </div>
+          </section>
+
+          <section class="flex w-[35em] flex-col gap-5">
+            <h1 class="font-serif text-4xl font-bold leading-tight">
+              Documents
+            </h1>
+
+            <div class="grid grid-cols-2 gap-5">
+              <template x-for="document in documents">
+                <div>
+                  <a
+                    target="_blank"
+                    class="underline"
+                    x-bind:href="`https://ipfs.io/ipfs/${document.file}`"
+                    x-text="document.name"
+                  ></a>
+                </div>
+              </template>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lenders | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/gun.min.js"></script>
+    <script src="/static/js/sea.min.js"></script>
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/lenders.js"></script>
+  </head>
+
+  <body>
+    <div id="app" x-data="app">
+      <header hx-get="/static/html/header.html" hx-trigger="load"></header>
+
+      <main>
+        <section class="container mx-auto px-5 py-24">
+          <h1 class="font-serif text-4xl font-bold">Lenders</h1>
+
+          <div class="mt-10 flex gap-24 text-xl leading-tight">
+            <template x-for="lender in lenders">
+              <article>
+                <p
+                  class="font-medium"
+                  x-text="`${lender.person}, ${lender.position}`"
+                ></p>
+                <p class="text-gray-500" x-text="lender.company"></p>
+
+                <p class="mt-2 text-base uppercase text-gray-500">Phone</p>
+                <p x-text="lender.phone"></p>
+
+                <p class="mt-2 text-base uppercase text-gray-500">Email</p>
+                <p x-text="lender.email"></p>
+
+                <p class="mt-2 text-base uppercase text-gray-500">Website</p>
+                <p x-text="lender.website"></p>
+              </article>
+            </template>
+          </div>
+        </section>
+      </main>
+
+      <footer hx-get="/static/html/footer.html" hx-trigger="load"></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Houses | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/fonts/butler.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <script src="/static/js/gun.min.js"></script>
+    <script src="/static/js/sea.min.js"></script>
+    <script src="/static/js/htmx.min.js" defer></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <script src="/static/vm/houses.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+  </head>
+
+  <body class="flex h-screen flex-col overflow-hidden" x-data="app">
+    <header
+      class="pb-5"
+      hx-get="/static/html/header.html"
+      hx-trigger="load"
+    ></header>
+
+    <main class="grid min-h-0 flex-grow border-[#1b1515] md:grid-cols-2">
+      <div id="map" class="h-full w-full bg-slate-100"></div>
+
+      <div class="grid gap-4 overflow-y-scroll bg-[#e9e6e1] p-4 lg:grid-cols-2">
+        <div class="flex flex-col gap-2 text-base lg:col-span-2">
+          <p>
+            Please call the housing office to verify that the membership you are
+            interested in purchasing has received permission to sell from
+            Potomac Heights Cooperative Housing.
+          </p>
+
+          <p>
+            Did you or did your real estate agent learn about a membership in
+            PHCH for sale on Realtor.com or a similar website? Not all homes
+            listed for sale on real estate websites have been approved for sale
+            by the cooperative.
+          </p>
+
+          <p>
+            Before a membership can be sold the dwelling must pass inspection by
+            a licensed home inspector. The electrical, plumbing, and heating
+            systems must be functional and safe. The roof, windows, and
+            foundation must be weather tight and safe. PHCH does not permit “as
+            is” sales with the understanding that the buyer will be bringing the
+            home up to livable standards after settlement.
+          </p>
+        </div>
+
+        <template x-for="house in houses">
+          <div
+            class="border-b-4 border-b-indigo-900 bg-[#edeae9]"
+            x-on:mouseenter="toggleMarker(house.address)"
+            x-on:mouseleave="removeMarker"
+          >
+            <div class="relative h-32 w-full bg-stone-300">
+<!--               <img
+                class="h-32 w-full object-cover object-center"
+                x-bind:src="`https://ipfs.moralis.io:2053/ipfs/${house.image}`"
+                alt="content"
+                x-show="house.image"
+              /> -->
+              <p
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-stone-400"
+                x-show="!house.image"
+              >
+                No images.
+              </p>
+            </div>
+
+            <div class="p-4">
+              <h3 class="text-xl font-medium" x-text="house.price"></h3>
+              <h2 class="text-base" x-text="house.address"></h2>
+              <p class="mt-2 text-base" x-text="house.description"></p>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+  </body>
+</html>

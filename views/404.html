@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404 | Potomac Heights</title>
+
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <script src="/static/js/htmx.min.js" defer></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="flex h-screen flex-wrap">
+        <div class="flex w-full flex-col justify-between lg:w-1/2">
+          <section class="flex px-10 pt-10">
+            <div class="h-16 w-16 rounded-full bg-blue-600"></div>
+          </section>
+
+          <section class="px-10">
+            <p class="font-medium uppercase text-blue-600">404 Error</p>
+            <h1 class="text-4xl font-bold leading-tight">Page not found</h1>
+            <p class="mt-1 font-medium text-slate-500">
+              Sorry, we couldn't find the page you're looking for.
+            </p>
+            <div class="mt-5">
+              <a class="font-medium text-blue-600" href="/">Go back home</a>
+            </div>
+          </section>
+
+          <section class="bg-slate-50 p-10">
+            <ul class="flex gap-5 font-medium text-slate-500">
+              <li>
+                <a href="#">Contact Support</a>
+              </li>
+              <li>
+                <a href="#">Status</a>
+              </li>
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="hidden h-full w-1/2 lg:block">
+          <img
+            class="h-full w-full object-cover"
+            src="/static/img/lost.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
