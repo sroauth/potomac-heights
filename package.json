@@ -2,8 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-			  "install": "python3 narflinger.py",
-				"start": "php -S localhost:$PORT -t public_html",
+        "install": "python3 narflinger.py",
+        "start": "php -S localhost:$PORT -t public_html",
         "dev": "vite",
         "build": "vite build"
     },
@@ -13,8 +13,8 @@
         "vite": "^5.0"
     },
     "narflinger": {
-		    "basenames": [
-				    "m79hmcrrkcw3zlvf817sl7r56pxj75hd-php-with-extensions-8.2.20"
-				]
-		}
+        "basenames": [
+          "m79hmcrrkcw3zlvf817sl7r56pxj75hd-php-with-extensions-8.2.20"
+        ]
+    }
 }
